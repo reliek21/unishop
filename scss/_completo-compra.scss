@@ -1,0 +1,36 @@
+/* ------------------------- */
+/* ESTILOS  PROCESO COMPLETO*/
+/* ------------------------- */
+
+.caja-completo {
+    margin: 80px auto;
+    text-align: center;
+    .caja-listo {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 100px;
+        p {
+            font-size: 40px;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        i {
+            color: #27AE60;
+            font-size: 90px;
+        }
+    }
+    a {
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 10px 40px;
+        background: #2D353E;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 4px;
+        &:hover {
+            background: #DC7633;
+        }
+    }
+}

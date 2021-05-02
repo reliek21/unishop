@@ -1,0 +1,251 @@
+/* ------------------------- */
+/* ESTILOS CAJA-COMPRA OVERLAY */
+/* ------------------------- */
+
+.overlay {
+    visibility: hidden;
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.popup {
+    background: #f8f8f8;
+    box-shadow: 0px 0px 18px -9px rgba(0,0,0,0.75);
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    width: 40%;
+    opacity: 0;
+    transition: .3s ease all;
+    transform: scale(0.5);
+    .btn-cerrar-popup {
+        font-size: 16px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        color: #BBBBBB;
+        padding: 0;
+        &:hover {
+            color: #DC7633;
+        }
+    }
+    .parrafos {
+        .titulo {
+            font-size: 36px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            opacity: 0;
+        }
+        .subtitulo {
+            font-size: 13px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            opacity: 0;
+            color: #99A3A4;
+            span {
+                color: #17202A;
+                font-weight: 500;
+            }
+        }
+    }
+    .targetas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        opacity: 0;
+        p {
+            margin-left: 10px;
+            font-size: 16px;
+            .visa {
+                color: #1a1f71;
+            }
+            
+            .master {
+                color: #ff5f00;
+            }
+            
+            .paypal {
+                color: #009cde;
+            }
+        }
+    }
+    .formulario {
+        width: 100%;
+        input {
+            background: none;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            border: 1px solid #7F8C8D;
+            &::placeholder {
+                text-transform: uppercase;
+                font-size: 11px;
+            }
+        }
+        .caja-uno {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            opacity: 0;
+            input[type="text"] {
+                width: 50%;
+                margin-left: 10px;
+                padding: 20px 20px;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        .caja-dos {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            opacity: 0;
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                margin-left: 10px;
+                padding: 20px 20px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .media {
+                display: flex;
+                flex-direction: row;
+                width: 55%;
+                input[type="text"],
+                input[type="password"] {
+                    width: 50%;
+                    margin-left: 10px;
+                    padding: 20px 20px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+        input[type="submit"] {
+            padding: 20px 30px;
+            background: #2C3E50;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            transition: background .3s ease;
+            &:hover {
+                background: #1E8449;
+            }
+        }
+    }
+}
+
+.popup.active {
+    opacity: 1;
+    transform: scale(1);
+    .titulo {
+        animation: entradaTitulo .8s ease .5s forwards;
+    }
+    .subtitulo {
+        animation: entradaSubtitulo .8s ease .5s forwards;
+    }
+    .targetas {
+        animation: entradaTagetas .8s ease .9s forwards;
+    }
+    .formulario { 
+        .caja-uno {
+            animation: entradaFormCajauno .8s ease .8s forwards;
+        }
+        .caja-dos {
+            animation: entradaFormCajados .8s ease 1s forwards;
+        }
+    }
+}
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaSubtitulo {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaTagetas {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes entradaFormCajados {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes entradaFormCajauno {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ------------------------- */
+/* MEDIA QUERIES OVERLAY */
+/* ------------------------- */
+
+@media screen and(max-width: 1370px) {
+    .popup {
+        width: 55%;
+        .formulario {
+            input {
+                &::placeholder {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.contenedor-administrador {
+    text-align: center;
+    h2 {
+        color: #34495E;
+        font-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .borde {
+        margin: auto;
+        width: 28%;
+        margin-bottom: 30px;
+    }
+    > a {
+        padding: 15px 30px;
+        background: #2c3e50;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 3px;
+        &:hover {
+            opacity: .7;
+        }
+    }
+    .contenedor-panel {
+        border-radius: 10px;
+        background: #2c3e50;
+        margin: 30px auto;
+        width: 80%;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .caja-ad {
+            border-radius: 4px;
+            width: 20%;
+            background: #fff;
+            text-align: center;
+            height: 210px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            margin: 10px 5px;
+            .texto {
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+            .cajas {
+                display: flex;
+                justify-content: space-around;
+                a {
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    color: #34495E;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .azul {
+                    color: #3498db;
+                }
+                .verde {
+                    color: #2ecc71 ;
+                }
+                .rojo {
+                    color: #e74c3c ;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1370px) {
+    .contenedor-administrador {
+        .borde  {
+            width: 38%;
+        }
+        .contenedor-panel {
+            width: 100%;
+            .caja-ad {
+                width: 24%;
+                height: 220px;
+                .texto {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.contenedor-agregar {
+    h2 {
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .formulario-contacto {
+        width: 50%;
+        margin: 40px auto;
+        padding: 30px;
+        .caja-uno {
+            display: flex;
+            justify-content: space-around;
+            input[type="text"],
+            input[type="text"] {
+                border: 1px solid #CCD1D1;
+                background: none;
+                padding: 20px;
+                width: 48%;
+                color: #2C3E50;
+                &:focus {
+                    outline: none;
+                }
+                &::placeholder {
+                    text-transform: uppercase;
+                    font-size: 12px;
+                }
+            }
+        }
+        .caja-dos {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            textarea {
+                background: none;
+                color: #2C3E50;
+                padding: 20px;
+                width: 100%;
+                max-width: 100%;
+                margin: 20px auto;
+                height: 200px;
+                max-height: 300px;
+                border: 1px solid #CCD1D1;
+                &:focus {
+                    outline: none;
+                }
+            }
+            input[type="submit"] {
+                margin-top: 20px;
+                background: #2ecc71;
+                padding: 15px 20px;
+                border: none;
+                text-transform: uppercase;
+                font-size: 16px;
+                color: #fff;
+                cursor: pointer;
+                border-radius: 2px;
+                transition: background .3s ease;
+                &:hover {
+                    background: #2c3e50 ;
+                }
+            }
+        }
+    }
+}

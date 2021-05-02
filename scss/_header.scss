@@ -1,0 +1,366 @@
+/* ------------------------- */
+/* ESTILOS HEADER LOGO */
+/* ------------------------- */
+
+.contenedor {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+     rgba(68, 69, 73, 0.801), 
+     rgba(52, 54, 53, 0.767)), 
+url(../img/imagenes/8.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+    // margin: 20px auto;
+}
+
+
+/* ------------------------- */
+/* ESTILOS INICIAR SESION */
+/* ------------------------- */
+
+.Inicio-contenedor {
+    height: 15vh;
+    background: #2d353e;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* ------------------------- */
+/* MEDIA QUERIES INICIO CONTENEDOR */
+/* ------------------------- */
+
+@media screen and (max-width: 1700px) {
+    .Inicio-contenedor {
+        height: 20vh;
+    }
+}
+
+
+/* ------------------------- */
+/* CAJA TEXTO */
+/* ------------------------- */
+
+.caja-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -70%);
+    text-align: center;
+    .caja-titulo {
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+        .caja-titulo-main {
+            display: block;
+            font-size: 60px;
+            font-weight: 900;
+            letter-spacing: 10px;
+            animation: moIzquierda 1s ease-out;
+        }
+        .caja-titulo-sub {
+            display: block;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 8px;
+            animation: moDerecha 1s ease-out;
+        }
+    }
+
+/* ------------------------- */
+/* ESTILOS DEL BOTON */
+/* ------------------------- */
+
+    .btn {
+        &:link,
+        &:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: relative;
+        }
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(245, 245, 245, 0.2);
+        }
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(245, 245, 245, 0.2);
+        }
+        &::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .4s;
+        }
+        &:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    .btn-blanco {
+        background-color: #fff;
+        color: #777;
+        &::after {
+            background-color: #fff;
+        }
+    }
+    .btn-animacion {
+        animation: mAbajo .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+
+/* ------------------------- */
+/* ANIMACIONES CAJA TEXTO*/
+/* ------------------------- */
+
+@keyframes moIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+}
+/* ------------------------- */
+/* ANIMACIONES BOTON */
+/* ------------------------- */
+
+@keyframes mAbajo {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* ------------------------- */
+/* CAJA USUARIO */
+/* ------------------------- */
+
+.caja-usuario {
+    position: absolute;
+    left: 5%;
+    top: 55px;
+    width: 20%;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li {
+            list-style: none;
+            a {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #fff;
+                .fas {
+                    text-align: center;
+                    position: relative;
+                    color: #fff;
+                    font-size: 20px;
+                    left: 5px;
+                    top: -3px;
+                    transition: top .5s ease;
+                    opacity: 1;
+                    transition: opacity .3s ease;
+                    &:hover {
+                        top: 0px;
+                        opacity: 0;
+                    }
+                }
+            }
+            &:hover > ul {
+                display: block;
+            }
+            ul {
+                display: none;
+                position: absolute;
+                padding: 10px;
+                li a {
+                    transition: border-bottom .3s ease;
+                    border-bottom: 2px solid transparent;
+                    padding: 3px;
+                    &:hover {
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+/* ------------------------- */
+/* CAJA MENU */
+/* ------------------------- */
+
+.caja-menu {
+    position: absolute;
+    left: 75%;
+    top: 50px;
+    width: 20%;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li {
+            list-style: none;
+            a {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #fff;
+                padding: 3px;
+                display: inline-block;
+                vertical-align: middle;
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                position: relative;
+                overflow: hidden;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    left: 0;
+                    right: 100%;
+                    bottom: 0;
+                    background: #fff;
+                    height: 1px;
+                    transition-property: right;
+                    transition-duration: 0.3s;
+                    transition-timing-function: ease-out;
+                }
+                &:hover:before,
+                &:focus:before,
+                &:active:before {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* ------------------------- */
+/* EFECTOS CAJA - MENU */
+/* ------------------------- */
+
+.caja-menu-efectos {
+    ul {
+        .uno {
+            opacity: 0;
+            animation: entradaMenuPrincipal .5s ease-out .7s forwards;
+        }
+        .dos {
+            opacity: 0;
+            animation: entradaMenuPrincipal .6s ease-out .8s forwards;
+        }
+        .tres {
+            opacity: 0;
+            animation: entradaMenuPrincipal .7s ease-out .9s forwards;
+        }
+        .cuatro {
+            opacity: 0;
+            animation: entradaMenuPrincipal .8s ease-out 1s forwards;
+        }
+    }
+}
+
+@keyframes entradaMenuPrincipal {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* ------------------------- */
+/* MEDIAQUERIES CAJA MENU */
+/* ------------------------- */
+
+@media screen and (max-width:1700px) {
+    .caja-menu {
+        left: 67%;
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .caja-menu {
+        left: 65%;
+        width: 27%;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .caja-menu {
+        left: 65%;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:1330px) {
+    .caja-menu {
+        left: 60%;
+        width: 35%;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .caja-menu {
+        left: 55%;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .caja-menu {
+        left: 50%;
+        width: 45%;
+    }
+}

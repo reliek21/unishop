@@ -1,0 +1,138 @@
+/* ------------------------- */
+/* ESTILOS SERVICIOS */
+/* ------------------------- */
+
+.caja-servicios {
+    width: 80%;
+    margin: 20px auto ;
+    padding: 10px 50px;
+    border-radius: 1px;
+    h2 {
+        color: #2d353e;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        letter-spacing: 5px;
+    }
+    .borde {
+        margin-bottom: 50px;
+        width: 30%;
+        color: #2d353e;
+    }
+    .caja {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .caja-precios {
+            text-align: center;
+            width: 25%;
+            height: 400px;
+            background: #229954;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            flex-direction: column;
+            box-shadow: -2px 4px 23px -5px rgba(0,0,0,0.75);
+            p {
+                color: #2d353e;
+                font-size: 16px;
+                text-align: center;
+                text-transform: uppercase;
+                border-bottom: 1px solid #2d353e;
+                margin-bottom: 20px;
+                font-weight: 500;
+                font-size: 20px;
+            }
+            .titulo {
+                color: #fff;
+                background: #2d353e;
+                border-radius: 10px 10px 0 0;
+                font-size: 30px;
+                letter-spacing: 3px;
+                padding: 20px;
+                font-weight: 900;
+            }
+            a {
+                background: #2d353e;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 16px;
+                padding: 25px 100.5px;
+                color: #fff;
+                border-radius: 0 0 10px 10px;
+                margin-top: -20px;
+            }
+            .precio {
+                font-weight: 700;
+                font-size: 36px;
+            }
+        }
+        .naranja {
+            background: #D35400;
+        }
+        .amarillo {
+            background: #F1C40F;
+        }
+    }
+}
+
+.preguntas {
+    padding: 50px;
+    width: 70%;
+    margin: 100px auto;
+    .titulo-principal {
+        text-align: center;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 40px;
+        color: #2d353e;
+    }
+    .borde {
+        margin: -5px auto;
+        width: 38%;
+    }
+    .titulo {
+        font-size: 20px;
+        font-weight: 300;
+        color: #D35400;
+        text-align: start;
+        margin-top: 30px;
+    }
+    p {
+        font-size: 15px;
+        color: #34383d;
+        text-align: justify;
+    }
+}
+
+/* ------------------------- */
+/* MEDIA QUERIES SERVICIOS */
+/* ------------------------- */
+
+@media screen and(max-width: 1370px) {
+    .caja-servicios {
+        width: 100%;
+        h2 {
+            font-size: 35px;
+        }
+        .borde {
+            width: 33%;
+        }
+        .caja {
+            .caja-precios {
+                width: 25%;
+            }
+        }
+    }
+
+    .preguntas {
+        width: 80%;
+        .titulo-principal {
+            font-size: 35px;
+        }
+        .borde {
+            width: 42%;
+            margin-bottom: 20px;
+        }
+    }
+}

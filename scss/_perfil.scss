@@ -1,0 +1,58 @@
+.perfil-usuario {
+    background: #2d353e;
+    height: 700px;
+    h2 {
+        color: #f2f2f2;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .borde {
+        width: 10%;
+        margin: auto;
+    }
+    .caja-perfil {
+        background: #f2f2f2;
+        width: 20%;
+        margin: 40px auto;
+        border-radius: 10px;
+        .formulario-perfil {
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            input[type="text"],
+            input[type="password"] {
+                border: 1px solid #2d353e;
+                padding: 20px;
+                font-size: 16px;
+                border-radius: 10px;
+                margin-bottom: 15px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            a {
+                padding: 20px 30px;
+                border: none;
+                width: 100%;
+                font-size: 16px;
+                margin-top: 20px;
+                border-radius: 10px;
+                cursor: pointer;
+                background: #2d353e;
+                text-align: center;
+                text-decoration: none;
+                color: #f2f2f2;
+            }
+            .verde {
+                &:hover {
+                    background: #196F3D;
+                }
+            }
+            .rojo {
+                &:hover {
+                    background: #C0392B;
+                }
+            }
+        }
+    }
+}

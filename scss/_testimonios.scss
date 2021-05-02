@@ -1,0 +1,98 @@
+/* ------------------------- */
+/* ESTILOS TESTIMONIOS */
+/* ------------------------- */
+
+.main-testimonios {
+    margin-top: -30vh;
+    background: #2d353e;
+    text-align: center;
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
+    h2 {
+        color: #fff;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: 900;
+        font-family: 'Lato', sans-serif;
+    }
+    .borde {
+        width: 40%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .izquierda {
+        left: -35vh;
+        position: relative;
+    }
+    .derecha {
+        right: -35vh;
+        position: relative;
+    }
+    .caja-testimonios {
+        width: 40%;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        .caja-imagen {
+            width: 20%;
+            img {
+                width: 100px;
+                border-radius: 10% 0 0 10%;
+                vertical-align: top;
+                border: 2px solid #fff;
+                padding: 10px;
+            }
+        }
+        .caja-texto2 {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            width: 80%;
+            .texto {
+                color: #fff;
+                font-size: 17px;
+                text-align: justify;
+            }
+            .nombre {
+                font-size: 14px;
+                color: #D35400 ;
+            }
+        }
+    }
+}
+
+/* ------------------------- */
+/* MEDIA QUERIES TESTIMONIOS */
+/* ------------------------- */
+
+@media screen and(max-width: 1370px) {
+    .main-testimonios {
+        margin-top: -50vh;
+        h2 {
+            font-size: 27px;
+        }
+        .derecha {
+            right: -40vh;
+        }
+        .caja-testimonios {
+            width: 50%;
+            .caja-imagen {
+                width: 30%;
+            }
+            .caja-texto2 {
+                .texto {
+                    font-size: 16px;
+                }
+                .nombre {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+/* ------------------------- */
+/* PAGINACION */
+/* ------------------------- */
+
+
+.paginacion {
+    margin-bottom: 30px;
+    ul {
+        list-style: none;
+        text-align: center;
+        li {
+            display: inline-block;
+            margin: 0 5px;
+            color: #fff;
+            border-radius: 5px;
+            a {
+                border-radius: 5px;
+                display: block;
+                padding: 10px 20px;
+                background: #2d353e;
+                color: #fff;
+                text-decoration: none;
+                &:hover {
+                    background: #DC7633;
+                    text-decoration: none;
+                }
+            }
+        }
+        .active {
+            a {
+                background: #DC7633;
+                padding: 10px 20px;
+            }
+        }
+        .disabled {
+            background: #a8a8a8;
+            padding: 10px 20px;
+            cursor: not-allowed;
+            &:hover {
+                background: #a8a8a8;
+            }
+        }
+    }
+}
